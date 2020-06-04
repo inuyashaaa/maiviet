@@ -480,6 +480,7 @@ ul.language-list {
     height: 150px;
     top: 0;
     left: 0;
+    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1179,7 +1180,7 @@ span.bor {
     overflow: hidden;
     border-radius: 5px;
     background: none;
-    line-height: 80px;
+    line-height: 25px;
     margin-top: 0;
     margin-bottom: 10px;
 }
@@ -1262,11 +1263,48 @@ span.bor {
 ==================================================
 ==================================================
 */
-@media only screen and (max-width: 1024) {
-
-    /* header */
-    header .col-md-1{
-        display: none!important;
+@media only screen and (min-width: 767px)and (max-width: 1000px) {
+    .menu-item {
+        position: relative;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+    .menu-link {
+        font-size: 0.7rem;
+    }
+    .menu-item.has-sub::after, .language::after, .mobile-menu-list > li.has-sub > a::after {
+        right: -10px;
+    }
+    .button {
+        padding: 6px 2px;
+    }
+    footer nav a {
+        margin-left: 20px;
+    }
+    #about-content .quote {
+        width: 230px;
+    }
+    #service .symbol {
+        width: 30px;
+    }
+}
+@media only screen and (min-width: 1000px)and (max-width: 1260.98px) {
+    .menu-item {
+        position: relative;
+        margin-right: 10px;
+        margin-left:10px;
+    }
+    .menu-link {
+        font-size: 0.7rem;
+    }
+    .button {
+        padding: 6px 2px;
+    }
+    #about-content .quote {
+        width: 230px;
+    }
+    #service .symbol {
+        width: 30px;
     }
 }
 @media only screen and (max-width: 767px) {
@@ -1705,6 +1743,7 @@ span.bor {
 }
 #service .head{
     overflow: hidden;
+    position: relative;
 }
 .card-service-home{
     text-decoration: none !important;
